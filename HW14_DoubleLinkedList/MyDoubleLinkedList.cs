@@ -110,24 +110,13 @@ namespace HW14_DoubleLinkedList
 
         public IEnumerable<T> BackEnumeartor()
         {
-            Node<T> current = tail;
 
-            do
+            var current = tail;
+            while (current != null)
             {
-                if (current != null)
-                {
-                    yield return current.Data;
-                    current = current.Previous;
-                }
-            }
-            while (current != null);
-
-            //var current = tail;
-            //while (current != null)
-            //{
-            //    yield return current.Data;
-            //    current = current.Previous;
-            //};
+                yield return current.Data;
+                current = current.Previous;
+            };
         }
 
         public void Clear()
@@ -218,25 +207,25 @@ namespace HW14_DoubleLinkedList
         }
 
 
-        public void PrintReverse()
-        {
-            var item = tail;
-            while (item != null)
-            {
-                Console.Write($"{item.Data}\t");
-                item = item.Previous;
-            }
-        }
+        //public void PrintReverse()
+        //{
+        //    var item = tail;
+        //    while (item != null)
+        //    {
+        //        Console.Write($"{item.Data}\t");
+        //        item = item.Previous;
+        //    }
+        //}
 
-        public void Print()
-        {
-            var item = head;
-            while (item != null)
-            {
-                Console.Write($"{item.Data}\t");
-                item = item.Next;
-            }
-        }
+        //public void Print()
+        //{
+        //    var item = head;
+        //    while (item != null)
+        //    {
+        //        Console.Write($"{item.Data}\t");
+        //        item = item.Next;
+        //    }
+        //}
 
         public IEnumerator<T> GetEnumerator()
         {

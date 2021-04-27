@@ -55,6 +55,18 @@ namespace HW14_DoubleLinkedList
             }
             Console.WriteLine();
 
+            firstList.Clear();
+
+            Console.Write("Print clear list\t");
+
+            foreach (var el in firstList)
+            {
+                Console.Write($"{el}\t");
+            }
+            Console.WriteLine();
+
+
+
             Console.WriteLine("\nSECOND LIST\n");
 
             secondList.AddFirst("3");
@@ -92,6 +104,18 @@ namespace HW14_DoubleLinkedList
                 Console.Write($"{el}\t");
             }
             Console.WriteLine();
+
+            secondList.Clear();
+
+            Console.Write("Print clear list\t");
+
+            foreach (var el in secondList)
+            {
+                Console.Write($"{el}\t");
+            }
+            Console.WriteLine();
+
+
 
 
             Console.WriteLine("\nMASS LIST\n");
@@ -132,6 +156,15 @@ namespace HW14_DoubleLinkedList
             }
             Console.WriteLine();
 
+            massList.Clear();
+
+            Console.Write("Print clear list\t");
+
+            foreach (var el in massList)
+            {
+                Console.Write($"{el}\t");
+            }
+            Console.WriteLine();
 
         }
     }
